@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>外側フィード — モック v3</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFFFFF;--ink:#111;--sub:#707070;--line:#ECECEC;--accent:#1A66FF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans JP',sans-serif;background:#F3F3F3;color:var(--ink);display:flex;justify-content:center}
+.app{width:100%;max-width:430px;background:var(--bg);min-height:100vh}
+header{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:14px 18px;z-index:5}
+header h1{font-size:1rem;font-weight:700}
+header p{font-size:.7rem;color:var(--sub);margin-top:2px}
+.summary{padding:14px 18px;border-bottom:8px solid #F6F6F6}
+.summary .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.chip{font-size:.68rem;background:#F1F3F6;border-radius:99px;padding:5px 11px;color:#444}
+.chip b{color:var(--ink)}
+.summary .note{font-size:.7rem;color:var(--sub);margin-top:10px;line-height:1.7}
+.feed{padding:6px 0 40px}
+.card{display:block;text-decoration:none;color:inherit;padding:14px 18px;border-bottom:1px solid var(--line)}
+.card:active{background:#FAFAFA}
+.thumb{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;background:#EEE;display:block}
+.meta{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-top:10px}
+.meta h3{font-size:.88rem;line-height:1.55;font-weight:500;flex:1}
+.out{flex-shrink:0;font-size:.66rem;font-weight:700;color:var(--accent);background:#EDF3FF;border-radius:6px;padding:4px 8px;white-space:nowrap}
+.ch{font-size:.72rem;color:var(--sub);margin-top:6px}
+.pending h3{color:#9A6B00}
+.pending .ch{color:#B08A30}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>外側フィード</h1>
+    <p>いま人気の動画 − あなたの登録チャンネル = この一覧</p>
+  </header>
+
+  <div class="summary">
+    <div class="row">
+      <span class="chip">読み込み済み:<b>89チャンネル</b></span>
+      <span class="chip">あなたの傾向:<b>K-POP / 美容 / カフェVlog 86%</b></span>
+    </div>
+    <p class="note">登録と被るチャンネルを除外し、あなたの傾向から遠い順に表示しています。「外側度」は興味からの遠さです。</p>
+  </div>
+
+  <div class="feed">
+
+    <a class="card" href="https://www.youtube.com/watch?v=vg_eyqflbW4" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/vg_eyqflbW4/hqdefault.jpg" alt="">
+      <div class="meta"><h3>【コンバイン】2町の稲刈り クボタDR6130【オペレーター目線】</h3><span class="out">外側 97%</span></div>
+      <div class="ch">株式会社グリーンランド・農業</div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=ykPoNx-ASZs" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/ykPoNx-ASZs/hqdefault.jpg" alt="">
+      <div class="meta"><h3>江戸から続く刀鍛冶の技術を継承。職人が生み出す唯一無二のハサミ — 鋏鍛冶夫婦の37年</h3><span class="out">外側 95%</span></div>
+      <div class="ch">関西テレビ・アーカイブ・伝統工芸</div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=wZLsHdqwMOk" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/wZLsHdqwMOk/hqdefault.jpg" alt="">
+      <div class="meta"><h3>プロも認めた名局!完全勝利! 藤井聡太名人 vs 永瀬拓矢九段 名人戦第3局【将棋解説】</h3><span class="out">外側 93%</span></div>
+      <div class="ch">将棋解説チャンネル・将棋</div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=fS4SKgzKawI" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/fS4SKgzKawI/hqdefault.jpg" alt="">
+      <div class="meta"><h3>ウメハラ「BeasTV」2017.1.19 一日ひとつだけ強くなる 慶應丸の内シティキャンパス講演</h3><span class="out">外側 90%</span></div>
+      <div class="ch">Daigo the BeasTV・講演</div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=_CjOwn_gvdc" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/_CjOwn_gvdc/hqdefault.jpg" alt="">
+      <div class="meta"><h3>野球は9回2アウトから!! 甲子園を決めたミラクルすぎる大逆転劇 — 東東京大会決勝・最終回の全攻防</h3><span class="out">外側 88%</span></div>
+      <div class="ch">高校野球ハイライト・スポーツ</div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=pQny5Y6Dn6g" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/pQny5Y6Dn6g/hqdefault.jpg" alt="">
+      <div class="meta"><h3>日本刀の職人たち VOL.1 刀鍛冶</h3><span class="out">外側 85%</span></div>
+      <div class="ch">文部科学省 mextchannel・伝統工芸</div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=yTRuEb3jnuo" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/yTRuEb3jnuo/hqdefault.jpg" alt="">
+      <div class="meta"><h3>【東京】400人前のチャーハンを作り続けぶっ倒れてしまう伝説の職人の1日がヤバ過ぎた</h3><span class="out">外側 81%</span></div>
+      <div class="ch">町中華密着・グルメ(再生数 要確認)</div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=t3PA7UfyTl8" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/t3PA7UfyTl8/hqdefault.jpg" alt="">
+      <div class="meta"><h3>バカはこうやって炙り出される。「説教されて〇〇と言う人は社会不適合者確定です。」</h3><span class="out">外側 78%</span></div>
+      <div class="ch">サイコパスおじさん【岡田斗司夫 切り抜き】・トーク</div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=E-Q1p_DR00g" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/E-Q1p_DR00g/hqdefault.jpg" alt="">
+      <div class="meta"><h3>【二郎系】大ラーメン全マシコールでガチ食い。ニンニクどっさりアブラガツン、厚切りのブタで腹パン確定。をすする 夢を語れ</h3><span class="out">外側 72%</span></div>
+      <div class="ch">SUSURU TV.・グルメ</div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=noR10sd_tx0" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/noR10sd_tx0/hqdefault.jpg" alt="">
+      <div class="meta"><h3>品川最強クラスのワンオペチャーハン職人の20人前を瞬殺する神業がヤバイ</h3><span class="out">外側 64%</span></div>
+      <div class="ch">もくめし・町中華</div>
+    </a>
+
+  </div>
+</div>
+</body>
+</html>
