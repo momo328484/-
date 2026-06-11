@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOTOMI — モック</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF;--ink:#111;--sub:#707070;--line:#ECECEC;--accent:#1A66FF;--pop:#E04A2F}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans JP',sans-serif;background:#F3F3F3;color:var(--ink);display:flex;justify-content:center}
+.app{width:100%;max-width:430px;background:var(--bg);min-height:100vh}
+header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:14px 18px;z-index:5}
+header h1{font-size:1.15rem;font-weight:900;letter-spacing:.08em}
+header h1 span{color:var(--pop)}
+header p{font-size:.72rem;color:var(--sub);margin-top:3px;line-height:1.6}
+.how{padding:16px 18px;border-bottom:8px solid #F6F6F6}
+.how .steps{display:flex;gap:6px;align-items:stretch}
+.step{flex:1;background:#F7F8FA;border-radius:10px;padding:10px 8px;text-align:center}
+.step .n{font-size:.6rem;font-weight:700;color:var(--accent)}
+.step .t{font-size:.7rem;font-weight:700;margin-top:3px;line-height:1.5}
+.step .d{font-size:.62rem;color:var(--sub);margin-top:2px;line-height:1.5}
+.arrow{align-self:center;color:#C9C9C9;font-size:.8rem}
+.you{margin-top:12px;background:#FFF7F0;border:1px solid #F4DFC8;border-radius:10px;padding:10px 12px;font-size:.72rem;line-height:1.7}
+.you b{color:var(--pop)}
+.feed{padding:6px 0 40px}
+.card{display:block;text-decoration:none;color:inherit;padding:14px 18px;border-bottom:1px solid var(--line)}
+.card:active{background:#FAFAFA}
+.thumb{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;background:#EEE;display:block}
+.meta h3{font-size:.9rem;line-height:1.55;font-weight:700;margin-top:10px}
+.ch{font-size:.72rem;color:var(--sub);margin-top:5px}
+.rel{margin-top:11px;background:#F7F8FA;border-radius:8px;padding:8px 10px}
+.rel .lbl{display:flex;justify-content:space-between;font-size:.7rem;margin-bottom:5px;align-items:baseline}
+.rel .lbl b{color:var(--pop);font-size:.92rem;font-weight:900}
+.rel .bar{height:7px;background:#E8E8E8;border-radius:99px;overflow:hidden}
+.rel .bar i{display:block;height:100%;background:var(--pop);border-radius:99px}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>SOTO<span>MI</span></h1>
+    <p>あなたと似た人が、まだ知らない人気動画だけのフィード</p>
+  </header>
+
+  <div class="how">
+    <div class="steps">
+      <div class="step"><div class="n">STEP 1</div><div class="t">登録を読み込む</div><div class="d">あなたの89チャンネル</div></div>
+      <div class="arrow">▶</div>
+      <div class="step"><div class="n">STEP 2</div><div class="t">人気動画と照合</div><div class="d">重複・類似を除外</div></div>
+      <div class="arrow">▶</div>
+      <div class="step"><div class="n">STEP 3</div><div class="t">遠い順に表示</div><div class="d">あなたから遠いほど上</div></div>
+    </div>
+    <div class="you">あなたの普段:<b>K-POP / 美容 / カフェVlog(86%)</b><br>↓ この10本は、世間では人気でも<b>あなたと似た人はほとんど見ていない</b>動画です。</div>
+  </div>
+
+  <div class="feed">
+
+    <a class="card" href="https://www.youtube.com/watch?v=0U0NqMvalAg" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/0U0NqMvalAg/hqdefault.jpg" alt="">
+      <div class="meta"><h3>正体不明のなぞの魚をさばいてみた。【モザイクなし】</h3></div>
+      <div class="ch">きまぐれクック・魚さばき</div>
+      <div class="rel"><div class="lbl"><span>あなたと似た人で、知っている人は</span><b>1%</b></div><div class="bar"><i style="width:1%"></i></div></div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=wZLsHdqwMOk" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/wZLsHdqwMOk/hqdefault.jpg" alt="">
+      <div class="meta"><h3>プロも認めた名局!完全勝利! 藤井聡太名人 vs 永瀬拓矢九段 名人戦第3局【将棋解説】</h3></div>
+      <div class="ch">将棋解説チャンネル・将棋</div>
+      <div class="rel"><div class="lbl"><span>あなたと似た人で、知っている人は</span><b>2%</b></div><div class="bar"><i style="width:2%"></i></div></div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=ykPoNx-ASZs" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/ykPoNx-ASZs/hqdefault.jpg" alt="">
+      <div class="meta"><h3>江戸から続く技術を継承。職人が生み出す唯一無二のハサミ — 鋏鍛冶夫婦の37年</h3></div>
+      <div class="ch">関西テレビ・アーカイブ・伝統工芸</div>
+      <div class="rel"><div class="lbl"><span>あなたと似た人で、知っている人は</span><b>3%</b></div><div class="bar"><i style="width:3%"></i></div></div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=fS4SKgzKawI" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/fS4SKgzKawI/hqdefault.jpg" alt="">
+      <div class="meta"><h3>ウメハラ「BeasTV」2017.1.19 一日ひとつだけ強くなる 慶應丸の内シティキャンパス講演</h3></div>
+      <div class="ch">Daigo the BeasTV・講演</div>
+      <div class="rel"><div class="lbl"><span>あなたと似た人で、知っている人は</span><b>4%</b></div><div class="bar"><i style="width:4%"></i></div></div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=_CjOwn_gvdc" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/_CjOwn_gvdc/hqdefault.jpg" alt="">
+      <div class="meta"><h3>野球は9回2アウトから!! 甲子園を決めたミラクルすぎる大逆転劇 — 最終回の全攻防</h3></div>
+      <div class="ch">高校野球ハイライト・スポーツ</div>
+      <div class="rel"><div class="lbl"><span>あなたと似た人で、知っている人は</span><b>6%</b></div><div class="bar"><i style="width:6%"></i></div></div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/results?search_query=M-1グランプリ2025+たくろう" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/yTRuEb3jnuo/hqdefault.jpg" alt="">
+      <div class="meta"><h3>M-1グランプリ2025 王者・たくろう 優勝ネタ&amp;優勝の瞬間</h3></div>
+      <div class="ch">M-1グランプリ公式・お笑い</div>
+      <div class="rel"><div class="lbl"><span>あなたと似た人で、知っている人は</span><b>9%</b></div><div class="bar"><i style="width:9%"></i></div></div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=t3PA7UfyTl8" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/t3PA7UfyTl8/hqdefault.jpg" alt="">
+      <div class="meta"><h3>バカはこうやって炙り出される。「説教されて〇〇と言う人は社会不適合者確定です。」</h3></div>
+      <div class="ch">サイコパスおじさん【岡田斗司夫 切り抜き】・トーク</div>
+      <div class="rel"><div class="lbl"><span>あなたと似た人で、知っている人は</span><b>12%</b></div><div class="bar"><i style="width:12%"></i></div></div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=E-Q1p_DR00g" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/E-Q1p_DR00g/hqdefault.jpg" alt="">
+      <div class="meta"><h3>【二郎系】大ラーメン全マシコールでガチ食い。ニンニクどっさりアブラガツン、厚切りのブタで腹パン確定。をすする 夢を語れ</h3></div>
+      <div class="ch">SUSURU TV.・グルメ</div>
+      <div class="rel"><div class="lbl"><span>あなたと似た人で、知っている人は</span><b>15%</b></div><div class="bar"><i style="width:15%"></i></div></div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=yTRuEb3jnuo" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/yTRuEb3jnuo/hqdefault.jpg" alt="">
+      <div class="meta"><h3>【東京】400人前のチャーハンを作り続けぶっ倒れてしまう伝説の職人の1日がヤバ過ぎた</h3></div>
+      <div class="ch">町中華密着・グルメ</div>
+      <div class="rel"><div class="lbl"><span>あなたと似た人で、知っている人は</span><b>18%</b></div><div class="bar"><i style="width:18%"></i></div></div>
+    </a>
+
+    <a class="card" href="https://www.youtube.com/watch?v=noR10sd_tx0" target="_blank" rel="noopener">
+      <img class="thumb" src="https://i.ytimg.com/vi/noR10sd_tx0/hqdefault.jpg" alt="">
+      <div class="meta"><h3>品川最強クラスのワンオペチャーハン職人の20人前を瞬殺する神業がヤバイ</h3></div>
+      <div class="ch">もくめし・町中華</div>
+      <div class="rel"><div class="lbl"><span>あなたと似た人で、知っている人は</span><b>23%</b></div><div class="bar"><i style="width:23%"></i></div></div>
+    </a>
+
+  </div>
+</div>
+</body>
+</html>
